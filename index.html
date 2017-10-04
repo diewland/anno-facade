@@ -1,0 +1,46 @@
+<!-- basic annotorious image -->
+<link type="text/css" rel="stylesheet" href="http://annotorious.github.io/latest/themes/dark/annotorious-dark.css" />
+<img id='anno_img' src="./sample.png" class="annotatable" />
+<script type="text/javascript" src="http://annotorious.github.io/latest/annotorious.min.js"></script>
+
+<!-- draw something on image by facade -->
+<script src='http://cdn.facadejs.com/0.3.0-beta/facade.min.js'></script>
+<script src='./anno.facade.js'></script>
+<script>
+
+  // build circle objects
+  var c1 = new Facade.Circle({
+    x: 450,
+    y: 300,
+    radius: 60,
+    lineWidth: 5,
+    strokeStyle: 'yellow',
+    fillStyle: 'rgba(0, 0, 0, 0)',
+  }),
+  c2 = new Facade.Circle({
+    x: 640,
+    y: 260,
+    radius: 45,
+    lineWidth: 5,
+    strokeStyle: 'yellow',
+    fillStyle: 'rgba(0, 0, 0, 0)',
+  }),
+  c3 = new Facade.Circle({
+    x: 910,
+    y: 400,
+    radius: 50,
+    lineWidth: 5,
+    strokeStyle: 'yellow',
+    fillStyle: 'rgba(0, 0, 0, 0)',
+  });
+
+  AnnoFacade.render('anno_img', function(stage){
+
+    // draw annotorious image
+    stage.addToStage(c1);
+    stage.addToStage(c2);
+    stage.addToStage(c3);
+
+  });
+
+</script>
